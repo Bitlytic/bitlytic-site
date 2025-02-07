@@ -1,9 +1,12 @@
 <script lang="ts">
     import { onMount } from "svelte";
 	import {Markdown} from 'svelte-exmarkdown';
+	import {gfmPlugin} from 'svelte-exmarkdown/gfm';
 
 	let {post, limit = 0}: {post: string, limit?: number | string} = $props();
 	
+	let plugins = [gfmPlugin()];
+
 	
 	let parsed = 0;
 	if (typeof limit === 'string') {
@@ -30,7 +33,7 @@
 
 
 <div>
-	<Markdown md={md}></Markdown>
+	<Markdown md={md} {plugins}></Markdown>
 	{#if limit}
 		<a href="videos/composition">
 			Read full post

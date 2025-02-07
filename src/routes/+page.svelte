@@ -2,7 +2,6 @@
     import Code from "../components/code.svelte";
 
 	let {data} = $props();
-	console.log(data);
 </script>
 
 <style lang="scss">

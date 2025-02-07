@@ -27,6 +27,8 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"@sveltestrap/sveltestrap": "^7.1.0"
+		"@svelte-dev/pretty-code": "^1.0.0",
+		"@sveltestrap/sveltestrap": "^7.1.0",
+		"highlight.js": "^11.11.1"
 	}
 }
