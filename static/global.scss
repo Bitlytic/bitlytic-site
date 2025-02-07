@@ -1,8 +1,8 @@
 @use "variables" as *;
 
 :global(body) {
-	background-color: $bg-primary;
-	color: $text-primary;
+	background-color: var(--bg-secondary);
+	color: var(--text-primary);
 	padding: 0;
 	margin: 0;
 	// font-family: "Montserrat", serif, monospace;
@@ -20,7 +20,7 @@
 
 	margin: 0px;
 	height: 4rem;
-	background-color: $bg-secondary;
+	background-color: var(--bg-primary);
 	
 	$navbarPadding: 15rem;
 	
@@ -61,12 +61,12 @@ $navbarSize: 20rem;
 	flex-direction: column;
 	align-items: flex-start;
 
-	border-right: 1px solid $panel-border;
+	border-right: 1px solid --panel-border;
 	margin: 0px;
 	// height: 100vh;
 	// width: 1rem;
 	width: $navbarSize;
-	background-color: $bg-secondary;
+	background-color: var(--bg-primary);
 	
 	$navbarPadding: 4rem;
 	
@@ -123,7 +123,7 @@ $navbarSize: 20rem;
 
 
 a {
-	color: $text-primary;
+	color: var(--text-primary);
 }
 
 a:link {
@@ -156,4 +156,81 @@ a:active {
 
 	// margin: 0 1rem;
 	// width: calc(100vw - 2rem);
+}
+
+.toggle-dark-mode {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 4;
+	width: 1rem;
+	height: 1rem;
+}
+
+$MintGreen:      	#DFFFE9;
+$LightGreen:     	#D3FBD8;
+$Shamrock:       	#5FFA84;
+$Foam:           	#6CFFCF;
+$White:          	#FFFFFF;
+$LighterGrey:      	#FAFAFA;
+$LightGrey:      	#D2D2D2;
+$Blurple: 			#8B92FF;
+$BlurpleSecondary: 	#5d62a8;
+$RoyalPurple:   	#9c64fa;
+$LightBlue:      	#6CBBFF;
+$LighterBlue:    	#A6DEF8;
+$Yorange:        	#F7D783;
+$Peach: 	        #F7926A;
+$Yellow:         	#FAFF6C;
+$Pred:           	#FF6C9C;
+$BackgroundGrey: 	#080808;
+$LighterBGGrey:  	#222228;
+
+$PassiveStarBase: #252525;
+$PassiveStarAccent: #569eff;
+
+$GodotDark: #333b4f;
+$GodotBase: #262c3b;
+$GodotAccent: #70bafa;
+
+@mixin dark {
+	// Dark
+	--panel-border: black;
+
+	--text-primary: #{$Blurple};
+	--text-secondary: #{$White};
+	--text-code: #{$Yorange};
+
+	--bg-primary: #{$BackgroundGrey};
+	--bg-secondary: #{$LighterBGGrey};
+	--bg-code: #{$LighterBGGrey};
+}
+
+@mixin light {
+
+	// Light
+	--panel-border: black;
+
+	--text-primary: #{$BackgroundGrey};
+	--text-secondary: #{$White};
+	--text-code: #{$Yorange};
+
+	--bg-primary: #{$White};
+	--bg-secondary: #{$LightGrey};
+	--bg-code: #{$LighterBGGrey};
+}
+
+
+:global(.light) {
+	@include light();
+}
+
+:global(.dark) {
+	@include dark();
+	
+}
+
+:global(*) {
+	transition: color 100ms linear;
+	transition: background-color 100ms linear;
 }

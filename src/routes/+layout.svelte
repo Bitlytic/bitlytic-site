@@ -1,5 +1,48 @@
 <script lang="ts">
+    import { browser } from '$app/environment';
+    import { onMount } from 'svelte';
+
 	let { children } = $props();
+
+	let darkMode = true;
+
+	function toggleColorScheme(override: boolean = false) {
+
+
+		if (override !== null) {
+			darkMode = override;
+		} else {
+			darkMode = !darkMode;
+		}
+
+		window.sessionStorage.setItem("darkMode", darkMode);
+
+		if (darkMode) {
+            window.document.body.classList.remove("light");
+            window.document.body.classList.add("dark");
+        } else {
+            window.document.body.classList.remove("dark");
+            window.document.body.classList.add("light");
+        }
+	}
+
+	function isDarkMode() {
+		if (import.meta.env.SRR) {
+			return false;
+		}
+
+		const sessionData = window.sessionStorage.getItem("darkMode");
+		if (sessionData) {
+			return "true" === sessionData;
+		}
+
+		return true;
+	}
+
+	if (browser) {
+		toggleColorScheme(isDarkMode());
+	}
+
 </script>
 
 <div class="navbar">
@@ -25,6 +68,12 @@
 		</div>
 	</div>
 </div>
+
+<button onclick={() => {toggleColorScheme(null)}} class="toggle-dark-mode" aria-label="toggleDarkMode">
+	<div class="icon">
+		Bruh
+	</div>
+</button>
 
 <div class="page-content">
 	{@render children()}

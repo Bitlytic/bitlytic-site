@@ -5,7 +5,7 @@
 	padding: 1rem;
 	width: 75vw;
 
-	background-color: $bg-secondary;
+	background-color: var(--bg-primary);
 
 	&__pfp {
 		border-radius: 50%;
@@ -24,9 +24,9 @@
 	padding: 1rem;
 	width: 100%;
 
-	background-color: $bg-secondary;
+	background-color: var(--bg-primary);
 
-	border: 1px solid $panel-border;
+	border: 1px solid --panel-border;
 
 	&__pfp {
 		border-radius: 50%;
@@ -40,7 +40,7 @@
 	text-align: center;
 	font-size: $medium-text;
 	font-weight: $font-weight-heavy;
-	color: $text-primary;
+	color: var(--text-color);
 
 	padding: 1rem;
 	width: 60%;
@@ -57,12 +57,12 @@
 
 	&__divider {
 		width: 65%;
-		color: $text-secondary;
+		color: var(--text-secondary);
 	}
 }
 
 :global(code) {
-	background-color: $bg-code;
-	color: $text-code;
+	background-color: var(--bg-code);
+	color: var(--text-code);
 	padding: 0 0.25rem;
 }

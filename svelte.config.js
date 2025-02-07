@@ -13,6 +13,7 @@ const config = {
 	extensions: ['.svelte', '.md'],
 	preprocess: [vitePreprocess(), mdsvex(mdsvexOptions)],
 
+	compilerOptions: {runes: true},
 	kit: {
 		adapter: adapter({
 			fallback: '404.html'

@@ -4,7 +4,7 @@
 
 Inheritance is how we're all taught to think about programming in school. 
 
-For example, let's have an `Entity` class with a `health`field. An `Enemy` is an `Entity`, the `Player` is an `Entity` and so on. 
+For example, let's have an `Entity` class with a `health` field. An `Enemy` is an `Entity`, the `Player` is an `Entity` and so on. 
 
 We add combat to our game, so both the `Player` and `Enemy` can attack, so we'll give them a `target` field. (Pretend that `health` and `target` have more complex underlying implementations)
 
