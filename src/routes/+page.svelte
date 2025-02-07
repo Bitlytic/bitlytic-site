@@ -1,7 +1,7 @@
-<script>
+<!-- <script>
     import Code from "../components/code.svelte";
 
-</script>
+</script> -->
 
 <style lang="scss">
 	@use "main.scss" as *;
@@ -13,9 +13,9 @@
 	</div>
 
 	
-	<div class="main-text">
+	<!-- <div class="main-text">
 		<iframe width="640" height="360" src="https://www.youtube.com/embed/74y6zWZfQKk" title="How You Can Easily Make Your Code Simpler in Godot 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-	</div>
+	</div> -->
 	
 	<!-- <div class="main-text main-text__description">
 		<Code post="videos/composition"></Code>
