@@ -63,8 +63,6 @@ $navbarSize: 20rem;
 
 	border-right: 2px solid var(--panel-border);
 	margin: 0px;
-	// height: 100vh;
-	// width: 1rem;
 	width: $navbarSize;
 	background-color: var(--bg-primary);
 	
@@ -87,6 +85,11 @@ $navbarSize: 20rem;
 			margin-left: 0.75rem;
 			margin-bottom: 0.5rem;
 			
+
+			&__picture {
+				margin-left: 0;
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -153,9 +156,6 @@ a:active {
 	left: calc($navbarSize + 4rem);
 
 	width: calc(100vw - $navbarSize - 10rem);
-
-	// margin: 0 1rem;
-	// width: calc(100vw - 2rem);
 }
 
 .toggle-dark-mode {
@@ -163,8 +163,6 @@ a:active {
 	bottom: 1rem;
 	left: 1rem;
 	z-index: 4;
-	// width: 1rem;
-	// height: 1rem;
 	background: none;
 	border: none;
 	color: var(--text-primary);

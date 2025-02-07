@@ -47,7 +47,9 @@
 
 <div class="navbar">
 	<div class="navbar__icon">
-		<img class="navbar__icon-logo" src="/crop.png"/>
+		<a class="navbar__icon-logo" href="/">
+			<img class="navbar__icon-logo navbar__icon-logo__picture" src="/crop.png" alt="Bitlytic"/>
+		</a>
 	</div>
 	<div class="navbar__title">
 		<a class="navbar__title-header" href="/">Bitlytic</a>
