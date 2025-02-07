@@ -19,7 +19,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : "/bitlytic-site"
+			base: process.argv.includes('dev') ? '' : ""
 		}
 	}
 };
