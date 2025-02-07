@@ -1,6 +1,6 @@
-<script>
+<!-- <script>
     import Code from "../components/code.svelte";
-</script>
+</script> -->
 
 <style lang="scss">
 	@use "main.scss" as *;
