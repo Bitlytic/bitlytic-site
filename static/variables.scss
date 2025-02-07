@@ -6,6 +6,7 @@ $White:          	#FFFFFF;
 $LighterGrey:      	#FAFAFA;
 $LightGrey:      	#D2D2D2;
 $Blurple: 			#8B92FF;
+$BlurpleSecondary: 	#5d62a8;
 $RoyalPurple:   	#9c64fa;
 $LightBlue:      	#6CBBFF;
 $LighterBlue:    	#A6DEF8;
@@ -13,19 +14,32 @@ $Yorange:        	#F7D783;
 $Peach: 	        #F7926A;
 $Yellow:         	#FAFF6C;
 $Pred:           	#FF6C9C;
-$BackgroundGrey: 	#111114;
+$BackgroundGrey: 	#080808;
 $LighterBGGrey:  	#222228;
 
+$PassiveStarBase: #252525;
+$PassiveStarAccent: #569eff;
 
+$GodotDark: #333b4f;
+$GodotBase: #262c3b;
+$GodotAccent: #70bafa;
+
+
+
+$panel-border: black;
 
 $text-primary: $Blurple;
+$text-secondary: $White;
+$text-primary: $Blurple;
+$text-code: $Yorange;
 
 $bg-primary: $LighterBGGrey;
 $bg-secondary: $BackgroundGrey;
+$bg-code: $LighterBGGrey;
 
-$regular-text: 1rem;
+$medium-text: 1rem;
 $large-text: 2rem;
 
 $font-weight-heavy: 200;
-$font-weight-regular: 600;
-$font-weight-heavy: 800;
+$font-weight-regular: 400;
+$font-weight-heavy: 500;

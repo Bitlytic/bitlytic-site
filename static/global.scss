@@ -5,7 +5,8 @@
 	color: $text-primary;
 	padding: 0;
 	margin: 0;
-	font-family: "Montserrat", serif;
+	// font-family: "Montserrat", serif, monospace;
+	font-family: monospace;
 	position: absolute;
 	top: 4rem;
 }
@@ -44,7 +45,7 @@
 
 		&-item {
 			margin: 0 1rem;
-			font-size: $regular-text;
+			font-size: $medium-text;
 			font-weight: $font-weight-regular;
 		}
 	}
@@ -60,6 +61,7 @@ $navbarSize: 20rem;
 	flex-direction: column;
 	align-items: flex-start;
 
+	border-right: 1px solid $panel-border;
 	margin: 0px;
 	// height: 100vh;
 	// width: 1rem;
@@ -72,6 +74,21 @@ $navbarSize: 20rem;
 	height: calc(100% - $navbarPadding*2);
 	
 	$itemPadding: 2rem;
+
+	&__icon {
+
+		align-self: center;
+		width: calc(100% - 1rem);
+
+		&-logo {
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			margin-left: 0.75rem;
+			margin-bottom: 0.5rem;
+			
+		}
+	}
 
 	&__separator {
 		width: calc(100% - $itemPadding);
@@ -98,7 +115,7 @@ $navbarSize: 20rem;
 		
 		&-item {
 			margin: 0.5rem 0;
-			font-size: $regular-text;
+			font-size: $medium-text;
 			font-weight: $font-weight-regular;
 		}
 	}
