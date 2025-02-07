@@ -4,18 +4,18 @@
 
 <div class="navbar">
 	<div class="navbar__title">
-		<a class="navbar__title-header" href="/">Home</a>
+		<a class="navbar__title-header" href="./">Home</a>
 	</div>
 	<hr class="navbar__separator"/>
 	<div class="navbar__page">
 		<div class="navbar__page-item">
-			<a href="/projects">Projects</a>
+			<a href="./projects">Projects</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/projects">Blog</a>
+			<a href="./projects">Blog</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/projects">Links</a>
+			<a href="./projects">Links</a>
 		</div>
 	</div>
 </div>
