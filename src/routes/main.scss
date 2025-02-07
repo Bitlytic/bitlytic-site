@@ -1,0 +1,32 @@
+@use "../../static/variables" as *;
+
+.main-page-old {
+
+	padding: 1rem;
+	width: 75vw;
+
+	background-color: $BackgroundGrey;
+
+	&__pfp {
+		border-radius: 50%;
+		width: 15rem;
+		height: 15rem;
+		margin: auto;
+	}
+}
+
+.main-page {
+
+	margin: 0 auto;
+	padding: 1rem;
+	width: 100%;
+
+	background-color: $BackgroundGrey;
+
+	&__pfp {
+		border-radius: 50%;
+		width: 15rem;
+		height: 15rem;
+		margin: auto;
+	}
+}

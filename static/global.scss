@@ -1,0 +1,142 @@
+@use "variables" as *;
+
+:global(body) {
+	background-color: $bg-primary;
+	color: $text-primary;
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", serif;
+	position: absolute;
+	top: 4rem;
+}
+
+.navbar-old {
+	position: fixed;
+	top: 0;
+
+	display: flex;
+	flex-direction: row;
+
+	margin: 0px;
+	height: 4rem;
+	background-color: $bg-secondary;
+	
+	$navbarPadding: 15rem;
+	
+	padding: 0 $navbarPadding;
+	width: calc(100% - $navbarPadding*2);
+
+	&__title {
+		align-self: center;
+		flex-grow: 1;
+
+		&-header {
+			font-size: $large-text;
+			font-weight: $font-weight-regular;
+		}
+	}
+
+	&__page {
+		align-self: center;
+		display: flex;
+		// padding: 1rem;
+		flex-direction: row;
+
+		&-item {
+			margin: 0 1rem;
+			font-size: $regular-text;
+			font-weight: $font-weight-regular;
+		}
+	}
+}
+
+$navbarSize: 20rem;
+
+.navbar {
+	position: fixed;
+	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	margin: 0px;
+	// height: 100vh;
+	// width: 1rem;
+	width: $navbarSize;
+	background-color: $bg-secondary;
+	
+	$navbarPadding: 4rem;
+	
+	padding: $navbarPadding 0;
+	height: calc(100% - $navbarPadding*2);
+	
+	$itemPadding: 2rem;
+
+	&__separator {
+		width: calc(100% - $itemPadding);
+	}
+
+	&__title {
+		align-self: center;
+
+		width: calc(100% - $itemPadding);
+
+		&-header {
+			font-size: $large-text;
+			font-weight: $font-weight-regular;
+		}
+	}
+
+	&__page {
+		align-self: center;
+		display: flex;
+		// padding: 1rem;
+		flex-direction: column;
+
+		width: calc(100% - $itemPadding);
+		
+		&-item {
+			margin: 0.5rem 0;
+			font-size: $regular-text;
+			font-weight: $font-weight-regular;
+		}
+	}
+}
+
+
+a {
+	color: $text-primary;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+.page-content-old {
+	margin: 0 1rem;
+	width: calc(100vw - 2rem);
+}
+
+.page-content {
+	position: relative;
+
+	left: calc($navbarSize + 4rem);
+
+	width: calc(100vw - $navbarSize - 10rem);
+
+	// margin: 0 1rem;
+	// width: calc(100vw - 2rem);
+}
