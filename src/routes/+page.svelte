@@ -18,8 +18,12 @@
 	</div>
 	
 	<div class="main-text main-text__description">
-		<Code post={data.videoPreview} limit=500></Code>
+		<data.videoPreview/>
 	</div>
+	
+	<a class="main-text main-text__read-more" href="videos/composition">
+		Read full post
+	</a>
 
 	<hr class="main-text__divider"/>
 

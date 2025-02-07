@@ -18,25 +18,12 @@ class_name Player
 
 
 Player.gd
-```swift
+```gdscript
 class_name Player
 extends CharacterBody2D
 
 func _ready() -> void:
 	print("Awawa")
-```
-
-
-```python
-
-print("Bruh")
-
-x = 5
-
-def myFunc():
-	print("Awawa")
-
-myFunc()
 ```
 
 

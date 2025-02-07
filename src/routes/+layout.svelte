@@ -70,9 +70,7 @@
 </div>
 
 <button onclick={() => {toggleColorScheme(null)}} class="toggle-dark-mode" aria-label="toggleDarkMode">
-	<div class="icon">
-		Bruh
-	</div>
+	Toggle Light Mode
 </button>
 
 <div class="page-content">

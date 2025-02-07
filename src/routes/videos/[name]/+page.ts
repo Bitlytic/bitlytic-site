@@ -8,13 +8,9 @@ export const load: PageLoad = async ({fetch, params}) => {
 		error(404, "Not found");
 	}
 
-	let test = await import("../../../videos/composition.md");
-	console.log(test.default);
-	let postText = await fetch(`/videos/${videoName}.md`).then(x => x.text());
-
+	let test = await import(`../../../videos/${videoName}.md`);
 	return {
 		videoName: videoName,
-		postText: postText,
-		test: test.default
+		post: test.default
 	};
 }

@@ -3,8 +3,6 @@
 
 	let {data} = $props();
 	let videoName : string = data.videoName;
-	let postText : string = data.postText;
-	let test = data.test;
 </script>
 
 
@@ -23,7 +21,7 @@
 	</div>
 	
 	<div class="main-text main-text__description">
-		<data.test/>
+		<data.post/>
 	</div>
 
 </div>
