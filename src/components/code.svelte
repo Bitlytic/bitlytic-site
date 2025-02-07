@@ -2,25 +2,38 @@
     import { onMount } from "svelte";
 	import {Markdown} from 'svelte-exmarkdown';
 
-	let {post} = $props();
-	let path = post + ".md";
+	let {post, limit = 0}: {post: string, limit?: number | string} = $props();
+	
+	
+	let parsed = 0;
+	if (typeof limit === 'string') {
+		parsed = parseInt(limit);
+	} else {
+		parsed = limit
+	}
+	
+	let shouldLimit = false;
 
-	let md = $state('Loading Content');
+	if (limit && post.length > parsed) {
+		shouldLimit = true
+	}
 
-	let codeHolder : HTMLDivElement;
+	if (parsed) {
+		post = post.substring(0, parsed);
+		post = post.trim();
+		post += "...";
+	}
 
-	const loadItems = async() => { 
-			const postText = await fetch(path).then(x => x.text());
-			md = postText;
-	};
-
-	onMount(() => {
-		loadItems();
-	});
+	let md = $state(post);
 
 </script>
 
 
-<div bind:this={codeHolder}>
+<div>
 	<Markdown md={md}></Markdown>
+	{#if limit}
+		<a href="videos/composition">
+			Read full post
+		</a>
+	{/if}
 </div>

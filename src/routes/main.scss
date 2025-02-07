@@ -49,7 +49,11 @@
 	&__header {
 		font-size: $large-text;
 		// font-weight: $font-weight-regular;
+		&--title {
+			text-transform: capitalize;
+		}
 	}
+
 
 	&__description {
 		font-size: $medium-text;

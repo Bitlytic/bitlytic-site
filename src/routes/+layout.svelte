@@ -6,7 +6,7 @@
 
 	let darkMode = true;
 
-	function toggleColorScheme(override: boolean = false) {
+	function toggleColorScheme(override: boolean | any = false) {
 
 
 		if (override !== null) {
@@ -47,24 +47,24 @@
 
 <div class="navbar">
 	<div class="navbar__icon">
-		<img class="navbar__icon-logo" src="crop.png"/>
+		<img class="navbar__icon-logo" src="/crop.png"/>
 	</div>
 	<div class="navbar__title">
-		<a class="navbar__title-header" href="./">Bitlytic</a>
+		<a class="navbar__title-header" href="/">Bitlytic</a>
 	</div>
 	<hr class="navbar__separator"/>
 	<div class="navbar__page">
 		<div class="navbar__page-item">
-			<a href="./videos">Videos</a>
+			<a href="/videos">Videos</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="./projects">Projects</a>
+			<a href="/projects">Projects</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="./projects">Blog</a>
+			<a href="/projects">Blog</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="./projects">Links</a>
+			<a href="/projects">Links</a>
 		</div>
 	</div>
 </div>
