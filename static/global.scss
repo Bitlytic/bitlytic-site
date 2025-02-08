@@ -166,6 +166,7 @@ a:active {
 	background: none;
 	border: none;
 	color: var(--text-primary);
+	cursor: pointer;
 }
 
 $MintGreen:      	#DFFFE9;
@@ -219,18 +220,18 @@ $GodotAccent: #70bafa;
 }
 
 @mixin light {
-
+	
 	// Light
 	--panel-border: black;
-
+	
 	--text-primary: #{$BackgroundGrey};
 	--text-secondary: #{$LighterBGGrey};
 	--text-code: #{$Pred};
-
+	
 	--bg-primary: #{$White};
 	--bg-secondary: #{$LightGrey};
 	--bg-code: #{$BackgroundGrey};
-
+	
 	--text-code-comment: #{$Grey};
 	--text-code-keyword: #{$Pred};
 	--text-code-class-name: #{$LightGreen};
