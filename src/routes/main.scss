@@ -14,6 +14,8 @@
 
 	border: 1px solid --panel-border;
 
+	border-radius: 0.5rem;
+
 	&__pfp {
 		border-radius: 50%;
 		width: 4rem;
@@ -26,15 +28,15 @@
 	text-align: center;
 	font-size: $medium-text;
 	font-weight: $font-weight-regular;
-	color: var(--text-secondary);
 	letter-spacing: 0.25px;
-
+	
 	padding: 1rem;
 	width: 60%;
 	align-self: center;
-
+	
 	&__header {
 		
+		color: var(--text-secondary);
 		font-size: $large-text;
 		font-weight: $font-weight-heavy;
 		&--title {
@@ -46,6 +48,7 @@
 	&__description {
 		font-size: $medium-text;
 		text-align: left;
+		color: var(--text-secondary);
 
 		&--centered {
 			text-align: center;
@@ -53,6 +56,7 @@
 	}
 
 	&__divider {
+		color: var(--text-secondary);
 		width: 65%;
 		color: var(--text-secondary);
 	}

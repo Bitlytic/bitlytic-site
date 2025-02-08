@@ -6,6 +6,7 @@
 		"blurple",
 		"yorange",
 		"pred",
+		"shamrock",
 	]
 
 	let currentColor: string;
@@ -125,7 +126,7 @@
 	</button>
 	
 	<button onclick={() => {changeAccent()}} ondblclick={() => {changeToSecretAccent();}} class="navbar__color-controls__button" aria-label="changeAccent">
-		Change Accent
+		Change Color
 	</button>
 </div>
 

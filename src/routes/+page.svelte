@@ -35,10 +35,4 @@
 	<div class="main-text main-text__header">
 		Or a blog post:
 	</div>
-
-
-	<div class="main-text">
-		Nostra dis cubilia eget platea; rutrum id mollis. Pellentesque eu in bibendum condimentum, imperdiet mus felis scelerisque. Montes enim id pharetra nascetur maximus. Ajusto cras, ultricies integer himenaeos platea urna vivamus. Parturient semper quam ante efficitur odio. Et nulla penatibus turpis; maecenas quis dictum. Semper congue ridiculus egestas; litora consectetur tellus. Quisque dictum ante laoreet nostra nulla placerat orci viverra. Non gravida rhoncus ultricies in eget per suscipit.
-	</div>
-
 </div>

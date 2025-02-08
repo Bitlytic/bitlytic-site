@@ -181,6 +181,11 @@ $GodotAccent: #70bafa;
 	@include defaults();
 }
 
+@mixin shamrock {
+	--accent-color: #{$Shamrock};
+	@include defaults();
+}
+
 @mixin white {
 	--accent-color: #{$White};
 	@include defaults();
@@ -252,6 +257,10 @@ $GodotAccent: #70bafa;
 
 :global(.pred) {
 	@include pred();
+}
+
+:global(.shamrock) {
+	@include shamrock();
 }
 
 :global(.white) {
