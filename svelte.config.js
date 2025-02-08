@@ -1,5 +1,6 @@
 import { createHighlighter } from '@svelte-dev/pretty-code';
-import adapter from '@sveltejs/adapter-static';
+// import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import {mdsvex} from 'mdsvex';
 
