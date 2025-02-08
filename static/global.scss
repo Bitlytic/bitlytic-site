@@ -11,45 +11,6 @@
 	top: 4rem;
 }
 
-.navbar-old {
-	position: fixed;
-	top: 0;
-
-	display: flex;
-	flex-direction: row;
-
-	margin: 0px;
-	height: 4rem;
-	background-color: var(--bg-primary);
-	
-	$navbarPadding: 15rem;
-	
-	padding: 0 $navbarPadding;
-	width: calc(100% - $navbarPadding*2);
-
-	&__title {
-		align-self: center;
-		flex-grow: 1;
-
-		&-header {
-			font-size: $large-text;
-			font-weight: $font-weight-regular;
-		}
-	}
-
-	&__page {
-		align-self: center;
-		display: flex;
-		// padding: 1rem;
-		flex-direction: row;
-
-		&-item {
-			margin: 0 1rem;
-			font-size: $medium-text;
-			font-weight: $font-weight-regular;
-		}
-	}
-}
 
 $navbarSize: 20rem;
 
@@ -145,11 +106,6 @@ a:active {
 	text-decoration: none;
 }
 
-.page-content-old {
-	margin: 0 1rem;
-	width: calc(100vw - 2rem);
-}
-
 .page-content {
 	position: relative;
 
@@ -158,15 +114,21 @@ a:active {
 	width: calc(100vw - $navbarSize - 10rem);
 }
 
-.toggle-dark-mode {
+.navbar__color-controls {
 	position: fixed;
 	bottom: 1rem;
 	left: 1rem;
 	z-index: 4;
-	background: none;
-	border: none;
-	color: var(--text-primary);
-	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+	
+	&__button {		
+		background: none;
+		border: none;
+		color: var(--text-primary);
+		cursor: pointer;
+	}
 }
 
 $MintGreen:      	#DFFFE9;
@@ -198,17 +160,51 @@ $GodotDark: #333b4f;
 $GodotBase: #262c3b;
 $GodotAccent: #70bafa;
 
+@mixin defaults {
+	--bg-dark-primary: #{$SlighterBGGrey};
+	--bg-dark-secondary: #{$BackgroundGrey};
+	--bg-dark-code: #{$LighterBGGrey};
+}
+
+@mixin blurple {
+	--accent-color: #{$Blurple};
+	@include defaults();
+}
+
+@mixin yorange {
+	--accent-color: #{$Yorange};
+	@include defaults();
+}
+
+@mixin pred {
+	--accent-color: #{$Pred};
+	@include defaults();
+}
+
+@mixin white {
+	--accent-color: #{$White};
+	@include defaults();
+}
+
+@mixin godot {
+	--accent-color: #{$GodotAccent};
+
+	--bg-dark-primary: #{$GodotDark};
+	--bg-dark-secondary: #{$GodotBase};
+	--bg-dark-code: #{$GodotBase};
+}
+
 @mixin dark {
 	// Dark
-	--panel-border: #{$Blurple};
+	--panel-border: var(--accent-color);
 
-	--text-primary: #{$Blurple};
+	--text-primary: var(--accent-color);
 	--text-secondary: #{$LightGrey};
 	--text-code: #{$Pred};
 
-	--bg-primary: #{$SlighterBGGrey};
-	--bg-secondary: #{$BackgroundGrey};
-	--bg-code: #{$LighterBGGrey};
+	--bg-primary: var(--bg-dark-primary);
+	--bg-secondary: var(--bg-dark-secondary);
+	--bg-code: var(--bg-dark-code);
 
 	--text-code-comment: #{$Grey};
 	--text-code-keyword: #{$Pred};
@@ -246,12 +242,33 @@ $GodotAccent: #70bafa;
 	@include light();
 }
 
+:global(.blurple) {
+	@include blurple();
+}
+
+:global(.yorange) {
+	@include yorange();
+}
+
+:global(.pred) {
+	@include pred();
+}
+
+:global(.white) {
+	@include white();
+}
+
+:global(.godot) {
+	@include godot();
+}
+
 :global(.dark) {
 	@include dark();
 	
 }
 
 :global(*) {
-	transition: color 100ms linear;
-	transition: background-color 100ms linear;
+	$transitionParams: 250ms linear;
+
+	transition: background-color $transitionParams, color $transitionParams, border-color $transitionParams;
 }

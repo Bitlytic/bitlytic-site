@@ -2,6 +2,52 @@
     import { browser } from '$app/environment';
     import { onMount } from 'svelte';
 
+	let accentColors : string[] = [
+		"blurple",
+		"yorange",
+		"pred",
+	]
+
+	let currentColor: string;
+
+	function changeAccent() {
+		let index = accentColors.findIndex((x) => x == currentColor);
+		index = (index + 1) % accentColors.length;
+		currentColor = accentColors[index];
+
+		window.sessionStorage.setItem("accentColor", currentColor);
+		applyColor();
+	}
+	
+	function loadColor() {		
+		const sessionData = window.sessionStorage.getItem("accentColor");	
+		if (typeof sessionData === "string") {
+			currentColor = sessionData;
+		}
+
+		if (!currentColor) {
+			currentColor = accentColors[0];
+		}
+	}
+
+	function applyColor() {
+		// Secret... shhh....
+		window.document.body.classList.remove("godot");
+
+		for (let color of accentColors) {
+			window.document.body.classList.remove(color);
+		}
+		window.document.body.classList.add(currentColor);
+
+	}
+
+	function changeToSecretAccent() {
+		currentColor = "godot";
+
+		applyColor();
+	}
+
+
 	let { children } = $props();
 
 	let darkMode = true;
@@ -41,6 +87,8 @@
 
 	if (browser) {
 		toggleColorScheme(isDarkMode());
+		loadColor();
+		applyColor();
 	}
 
 </script>
@@ -71,14 +119,20 @@
 	</div>
 </div>
 
-<button onclick={() => {toggleColorScheme(null)}} class="toggle-dark-mode" aria-label="toggleDarkMode">
-	Toggle Light Mode
-</button>
+<div class="navbar__color-controls">
+	<button onclick={() => {toggleColorScheme(null)}} class="navbar__color-controls__button" aria-label="toggleDarkMode">
+		Toggle Light Mode
+	</button>
+	
+	<button onclick={() => {changeAccent()}} ondblclick={() => {changeToSecretAccent();}} class="navbar__color-controls__button" aria-label="changeAccent">
+		Change Accent
+	</button>
+</div>
 
 <div class="page-content">
 	{@render children()}
 </div>
 
 <style lang="scss">
-	@use "../../static/global.scss" as *;
+	@use "/static/global.scss" as *;
 </style>

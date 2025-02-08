@@ -8,9 +8,10 @@ export const load: PageLoad = async ({fetch, params}) => {
 		error(404, "Not found");
 	}
 
-	let test = await import(`../../../videos/${videoName}.md`);
+	let md = await import(`../../../videos/${videoName}.md`);
+
 	return {
-		videoName: videoName,
-		post: test.default
+		post: md.default,
+		meta: md.metadata,
 	};
 }

@@ -1,12 +1,10 @@
 <script>
 
 	let {data} = $props();
-
-	console.log(data);
 </script>
 
 <style lang="scss">
-	@use "../main.scss" as *;
+	@use "videos.scss" as *;
 </style>
 
 <div class="main-page">
@@ -14,9 +12,20 @@
 		Videos
 	</div>
 
-	{#each data.posts as post}
-	<div>{post.title}</div>
-	<a href={"/videos/" + post.slug}>View Post</a>
-	{/each}
+	<div class="main-text main-text__description main-text__description--centered">
+		Here are the videos I feel are worth speaking on. Clicking on any of them will take you to a page where you can read an associated post about why that video came to be or any additional notes I feel were cool to include.
+	</div>
+
+	<div class="video-grid">
+		{#each data.posts as post}
+		<div class="video-grid__item">
+
+				<a class="video-grid__item-link" href={"/videos/" + post.slug}>
+					<img class="video-grid__item-thumbnail" src={"/thumbnails/" + post.slug + ".webp"}/>
+				</a>
+			<a class="video-grid__item-title" href={"/videos/" + post.slug}>{post.title}</a>
+		</div>
+		{/each}
+	</div>	
 
 </div>

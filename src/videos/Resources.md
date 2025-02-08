@@ -1,6 +1,7 @@
 ---
 layout: video
 title: Resources
+link: https://www.youtube.com/embed/h5vpjCDNa-w
 ---
 
 ## Resources

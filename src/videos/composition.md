@@ -1,6 +1,7 @@
 ---
 layout: video
 title: Composition
+link: https://www.youtube.com/embed/74y6zWZfQKk
 ---
 
 ## Inheritance vs Composition

@@ -1,0 +1,51 @@
+
+@use "../main.scss" as *;
+@use "/static/variables.scss" as *;
+
+.video-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 1rem 0;
+
+		&-link {
+			width: 75%;
+			margin: 0 0 1rem 0;
+		}
+
+		&-thumbnail {
+			max-width: 100%;
+			margin: auto;
+		}
+
+		&-title {
+			font-size: $medium-text;
+			font-weight: $font-weight-heavy;
+		}
+	}
+}
+
+a {
+	color: var(--text-primary);
+}
+
+a:link {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: underline;
+	color: var()
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
