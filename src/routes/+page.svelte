@@ -1,10 +1,14 @@
 <script>
+    import Seo from "../components/seo.svelte";
+
 	let {data} = $props();
 </script>
 
 <style lang="scss">
 	@use "main.scss" as *;
 </style>
+
+<Seo></Seo>
 
 <div class="main-page">
 	<div class="main-text main-text__header">
