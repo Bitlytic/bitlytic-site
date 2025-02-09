@@ -1,54 +1,16 @@
 @use "variables" as *;
 
 :global(body) {
-	background-color: $bg-primary;
-	color: $text-primary;
+	background-color: var(--bg-secondary) !important;
+	color: var(--text-primary);
 	padding: 0;
 	margin: 0;
-	font-family: "Montserrat", serif;
+	// font-family: "Montserrat", serif, monospace;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	position: absolute;
 	top: 4rem;
 }
 
-.navbar-old {
-	position: fixed;
-	top: 0;
-
-	display: flex;
-	flex-direction: row;
-
-	margin: 0px;
-	height: 4rem;
-	background-color: $bg-secondary;
-	
-	$navbarPadding: 15rem;
-	
-	padding: 0 $navbarPadding;
-	width: calc(100% - $navbarPadding*2);
-
-	&__title {
-		align-self: center;
-		flex-grow: 1;
-
-		&-header {
-			font-size: $large-text;
-			font-weight: $font-weight-regular;
-		}
-	}
-
-	&__page {
-		align-self: center;
-		display: flex;
-		// padding: 1rem;
-		flex-direction: row;
-
-		&-item {
-			margin: 0 1rem;
-			font-size: $regular-text;
-			font-weight: $font-weight-regular;
-		}
-	}
-}
 
 $navbarSize: 20rem;
 
@@ -60,11 +22,10 @@ $navbarSize: 20rem;
 	flex-direction: column;
 	align-items: flex-start;
 
+	border-right: 2px solid var(--panel-border);
 	margin: 0px;
-	// height: 100vh;
-	// width: 1rem;
 	width: $navbarSize;
-	background-color: $bg-secondary;
+	background-color: var(--bg-primary);
 	
 	$navbarPadding: 4rem;
 	
@@ -72,6 +33,26 @@ $navbarSize: 20rem;
 	height: calc(100% - $navbarPadding*2);
 	
 	$itemPadding: 2rem;
+
+	&__icon {
+
+		align-self: center;
+		width: calc(100% - 1rem);
+
+		&-logo {
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			margin-left: 0.75rem;
+			margin-bottom: 0.5rem;
+			
+
+			&__picture {
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
 
 	&__separator {
 		width: calc(100% - $itemPadding);
@@ -84,7 +65,7 @@ $navbarSize: 20rem;
 
 		&-header {
 			font-size: $large-text;
-			font-weight: $font-weight-regular;
+			font-weight: $font-weight-heavy;
 		}
 	}
 
@@ -98,15 +79,15 @@ $navbarSize: 20rem;
 		
 		&-item {
 			margin: 0.5rem 0;
-			font-size: $regular-text;
-			font-weight: $font-weight-regular;
+			font-size: $medium-text;
+			font-weight: $font-weight-heavy;
 		}
 	}
 }
 
 
 a {
-	color: $text-primary;
+	color: var(--text-primary);
 }
 
 a:link {
@@ -125,18 +106,179 @@ a:active {
 	text-decoration: none;
 }
 
-.page-content-old {
-	margin: 0 1rem;
-	width: calc(100vw - 2rem);
-}
-
 .page-content {
 	position: relative;
 
 	left: calc($navbarSize + 4rem);
 
 	width: calc(100vw - $navbarSize - 10rem);
+}
 
-	// margin: 0 1rem;
-	// width: calc(100vw - 2rem);
+.navbar__color-controls {
+	position: fixed;
+	bottom: 1rem;
+	left: 1rem;
+	z-index: 4;
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5rem;
+	
+	&__button {		
+		background: none;
+		border: none;
+		color: var(--text-primary);
+		cursor: pointer;
+	}
+}
+
+$MintGreen:      	#DFFFE9;
+$LightGreen:     	#D3FBD8;
+$Shamrock:       	#5FFA84;
+$Foam:           	#6CFFCF;
+$White:          	#FFFFFF;
+$LighterGrey:      	#FAFAFA;
+$LightGrey:      	#D2D2D2;
+$Grey:      		#a7a7a7;
+$PaleBlurple: 		#d7d9ff;
+$Blurple: 			#8B92FF;
+$BlurpleSecondary: 	#5d62a8;
+$RoyalPurple:   	#9c64fa;
+$LightBlue:      	#6CBBFF;
+$LighterBlue:    	#A6DEF8;
+$Yorange:        	#F7D783;
+$Peach: 	        #F7926A;
+$Yellow:         	#FAFF6C;
+$Pred:           	#FF6C9C;
+$BackgroundGrey: 	#090909;
+$SlighterBGGrey:  	#151517;
+$LighterBGGrey:  	#222228;
+
+$PassiveStarBase: #252525;
+$PassiveStarAccent: #569eff;
+
+$GodotDark: #333b4f;
+$GodotBase: #262c3b;
+$GodotAccent: #70bafa;
+
+@mixin defaults {
+	--bg-dark-primary: #{$SlighterBGGrey};
+	--bg-dark-secondary: #{$BackgroundGrey};
+	--bg-dark-code: #{$LighterBGGrey};
+}
+
+@mixin blurple {
+	--accent-color: #{$Blurple};
+	@include defaults();
+}
+
+@mixin yorange {
+	--accent-color: #{$Yorange};
+	@include defaults();
+}
+
+@mixin pred {
+	--accent-color: #{$Pred};
+	@include defaults();
+}
+
+@mixin shamrock {
+	--accent-color: #{$Shamrock};
+	@include defaults();
+}
+
+@mixin white {
+	--accent-color: #{$White};
+	@include defaults();
+}
+
+@mixin godot {
+	--accent-color: #{$GodotAccent};
+
+	--bg-dark-primary: #{$GodotDark};
+	--bg-dark-secondary: #{$GodotBase};
+	--bg-dark-code: #{$GodotBase};
+}
+
+@mixin dark {
+	// Dark
+	--panel-border: var(--accent-color);
+
+	--text-primary: var(--accent-color);
+	--text-secondary: #{$LightGrey};
+	--text-tertiary: #{$Grey};
+	--text-code: #{$Pred};
+
+	--bg-primary: var(--bg-dark-primary);
+	--bg-secondary: var(--bg-dark-secondary);
+	--bg-code: var(--bg-dark-code);
+
+	--text-code-comment: #{$Grey};
+	--text-code-keyword: #{$Pred};
+	--text-code-class-name: #{$LightGreen};
+	--text-code-function: #{$LightBlue};
+	--text-code-punctuation: #{$White};
+	--text-code-operator: #{$White};
+	--text-code-string: #{$Yorange};
+}
+
+@mixin light {
+	
+	// Light
+	--panel-border: black;
+	
+	--text-primary: #{$BackgroundGrey};
+	--text-secondary: #{$LighterBGGrey};
+	--text-code: #{$Pred};
+	
+	--bg-primary: #{$White};
+	--bg-secondary: #{$LightGrey};
+	--bg-code: #{$BackgroundGrey};
+	
+	--text-code-comment: #{$Grey};
+	--text-code-keyword: #{$Pred};
+	--text-code-class-name: #{$LightGreen};
+	--text-code-function: #{$LightBlue};
+	--text-code-punctuation: #{$White};
+	--text-code-operator: #{$White};
+	--text-code-string: #{$Yorange};
+}
+
+
+:global(.light) {
+	@include light();
+}
+
+:global(.blurple) {
+	@include blurple();
+}
+
+:global(.yorange) {
+	@include yorange();
+}
+
+:global(.pred) {
+	@include pred();
+}
+
+:global(.shamrock) {
+	@include shamrock();
+}
+
+:global(.white) {
+	@include white();
+}
+
+:global(.godot) {
+	@include godot();
+}
+
+:global(.dark) {
+	@include dark();
+	
+}
+
+:global(*) {
+	$transitionParams: 250ms linear;
+
+	transition: background-color $transitionParams, color $transitionParams, border-color $transitionParams;
 }
