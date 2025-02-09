@@ -2,6 +2,7 @@ import { createHighlighter } from '@svelte-dev/pretty-code';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import {mdsvex} from 'mdsvex';
+import {redirects} from "./src/lib/redirects.js";
 
 const mdsvexOptions = {
 	extensions: ['.md'],
@@ -32,10 +33,14 @@ const config = {
 	},
 	compilerOptions: {runes: true},
 	kit: {
+		prerender: {
+			handleHttpError: "warn",
+			entries: ["*", ...Object.keys(redirects)],
+		},
 		adapter: adapter({
 			fallback: '404.html',
 			paths: {
-				base: "/bitlytic-site"
+				base: ""
 			}
 		}),
 	}
