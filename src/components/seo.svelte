@@ -4,6 +4,7 @@
 	let title = "Bitlytic's Space";
 	let description = "A feesh's yap site about software and game dev.";
 	let image = "https://bitlytic.dev/vaporeon.png";
+	console.log("SEO stuff");
 </script>
 
 <svelte:head>
@@ -23,7 +24,7 @@
 	<meta property="twitter:domain" content="bitlytic.org" />
 	<meta
 	  property="twitter:url"
-	  content="https://bitlytic.org{page.url.pathname.toString()}"
+	  content="https://bitlytic.dev{page.url.pathname.toString()}"
 	/>
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
@@ -33,6 +34,6 @@
 	 "@context": "https://schema.org",
 	 "@type": "Website",
 	 "name": "${title}",
-	 "url": "https//bitlytic.org${page.url.pathname.toString()}",
+	 "url": "https//bitlytic.dev${page.url.pathname.toString()}",
 	 "logo": ${image}  }</script>`}
 </svelte:head>
