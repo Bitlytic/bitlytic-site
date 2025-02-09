@@ -1,0 +1,2 @@
+Sitemap: https://bitlytic.dev/api/sitemap.xml
+User-agent: *

@@ -21,7 +21,7 @@
 	<meta property="og:image" content={image} />
   
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content="bitlytic.org" />
+	<meta property="twitter:domain" content="bitlytic.dev" />
 	<meta
 	  property="twitter:url"
 	  content="https://bitlytic.dev{page.url.pathname.toString()}"
@@ -31,7 +31,7 @@
 	<meta name="twitter:image" content={image} />
   
 	{@html `<script type="application/ld+json">{
-	 "@context": "https://schema.org",
+	 "@context": "https://schema.dev",
 	 "@type": "Website",
 	 "name": "${title}",
 	 "url": "https//bitlytic.dev${page.url.pathname.toString()}",
