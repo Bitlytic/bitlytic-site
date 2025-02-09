@@ -25,6 +25,19 @@
 	h4 {
 		margin: 0 auto;
 		color: var(--text-tertiary);
-		font-size: $small-text;
+		font-size: $tiny-text;
+	}
+}
+
+.main-text__description {
+	p {
+		&:has(img) {
+			margin: auto;
+			max-width: 75%;
+		}
+
+		img {
+			max-width: 100%;
+		}
 	}
 }

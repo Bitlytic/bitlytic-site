@@ -2,30 +2,35 @@
 	type postSortFunc = (a: ProjectPost, b: ProjectPost) => number;
 
     import type { ProjectPost } from '$lib/post.js';
+    import { onMount } from 'svelte';
 
 	let { data } = $props();
 
 	let posts = $state(data.posts);
 
+	let asc_sort = $state(false);
+
 	let sort_post_date = (a: ProjectPost, b: ProjectPost) => {return new Date(b.postDate).getTime() - new Date(a.postDate).getTime();};
 	let sort_create_date = (a: ProjectPost, b: ProjectPost) => {return new Date(b.createDate).getTime() - new Date(a.createDate).getTime();};
 	let sort_alphabetical = (a: ProjectPost, b: ProjectPost) => {return a.title.localeCompare(b.title);};
-	let last_sort_func : postSortFunc | undefined;
+	let last_sort_func : postSortFunc | undefined = $state();
 
 	// This honestly feels so gross but I can't figure out how to do typescript classes in svelte...
 	function sort_posts(sort_func: postSortFunc) {
-		console.log("Before sort: ", posts);
 		posts = posts.sort(sort_func);
-		console.log("After sort: ", posts);
 
 		if (sort_func === last_sort_func) {
-			console.log("Swap order: ", posts);
-			posts = posts.reverse();
-			last_sort_func = undefined;
+			if (asc_sort) {
+				posts = posts.reverse();
+				asc_sort = false;
+			} else {
+				asc_sort = true;
+			}
 			return;
 		}
 
 		last_sort_func = sort_func;
+		asc_sort = true;
 	}
 
 	function getFormattedDate(dateString: string): string {
@@ -38,6 +43,10 @@
 
 		return date.toLocaleDateString("en-us", dateOptions);
 	}
+
+	// Select default sort
+	last_sort_func = sort_post_date;
+	sort_posts(last_sort_func);
 
 </script>
 
@@ -59,13 +68,37 @@
 	<div class="project-sort-controls">
 		<span>Sort by: </span>
 		<button onclick={() => sort_posts(sort_post_date)} class="project-sort-controls__button">
-			Post Date
+			Post Date 
+			{#if last_sort_func == sort_post_date}
+				{#if asc_sort}
+					▼
+				{/if}
+				{#if !asc_sort}
+					▲
+				{/if}
+			{/if}
 		</button>
 		<button onclick={() => sort_posts(sort_create_date)} class="project-sort-controls__button">
 			Project Creation Date
+			{#if last_sort_func == sort_create_date}
+				{#if asc_sort}
+					▼
+				{/if}
+				{#if !asc_sort}
+					▲
+				{/if}
+			{/if}
 		</button>
 		<button onclick={() => sort_posts(sort_alphabetical)} class="project-sort-controls__button">
 			Alphabetical
+			{#if last_sort_func == sort_alphabetical}
+				{#if asc_sort}
+					▼
+				{/if}
+				{#if !asc_sort}
+					▲
+				{/if}
+			{/if}
 		</button>
 	</div>
 

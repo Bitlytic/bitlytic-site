@@ -31,6 +31,15 @@
 		Or a project:
 	</div>
 
+	<div class="main-text main-text__description">
+		<data.projectPreview/>
+	</div>
+
+	<a class="main-text main-text__read-more" href="post/project/composition">
+		Read full post
+	</a>
+
+	<hr class="main-text__divider"/>
 
 	<div class="main-text main-text__header">
 		Or a blog post:
