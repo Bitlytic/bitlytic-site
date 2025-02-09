@@ -8,8 +8,6 @@
 	@use "main.scss" as *;
 </style>
 
-<Seo></Seo>
-
 <div class="main-page">
 	<div class="main-text main-text__header">
 		Check out a youtube video:
@@ -37,7 +35,7 @@
 		<data.projectPreview/>
 	</div>
 
-	<a class="main-text main-text__read-more" href="post/project/composition">
+	<a class="main-text main-text__read-more" href="post/project/antworks">
 		Read full post
 	</a>
 

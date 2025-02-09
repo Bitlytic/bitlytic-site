@@ -4,7 +4,6 @@
 	let title = "Bitlytic's Space";
 	let description = "A feesh's yap site about software and game dev.";
 	let image = "https://bitlytic.dev/vaporeon.png";
-	console.log("SEO stuff");
 </script>
 
 <svelte:head>
