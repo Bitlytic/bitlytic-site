@@ -1,17 +1,10 @@
 <script>
-    import Code from "../components/code.svelte";
-	import {MetaTags} from "svelte-meta-tags";
-
 	let {data} = $props();
 </script>
 
 <style lang="scss">
 	@use "main.scss" as *;
 </style>
-
-<MetaTags title="Bitlytic's Space"
-description = "A feesh's yap site">
-</MetaTags>
 
 <div class="main-page">
 	<div class="main-text main-text__header">
