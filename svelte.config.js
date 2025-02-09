@@ -38,7 +38,6 @@ const config = {
 			entries: ["*", ...Object.keys(redirects)],
 		},
 		adapter: adapter({
-			fallback: '404.html',
 			paths: {
 				base: ""
 			}
