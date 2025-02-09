@@ -1,3 +1,4 @@
 export const redirects = {
-	"/videos.html": "/videos"
+	"/videos.html": "/videos",
+	"/sitemap": "/sitemap.xml"
 }
