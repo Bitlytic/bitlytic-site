@@ -18,7 +18,7 @@ As a bonus for this, we wanted the romhack to be playable on an actual Nintendo 
 
 I'm actually super excited to talk about this project because of the _many_ hacks and workarounds that were needed to get this hack to work. Things like moving fruits between levels, getting the movement _just_ right, and other N64 shenanigans.
 
-Luckily for us, I actually made quite a large amount of gifs of the progress as this hack, all the way from Mario being used, to the moment that I managed to get the fruit mechanics down, so let's dive in!
+Luckily for us, I actually made quite a large amount of gifs during development of this hack, all the way from Mario being used, to the moment that I managed to get the drag mechanics down, so let's dive in!
 
 
 ![Screenshot](/screenshots/antworks/first-crawl.gif)

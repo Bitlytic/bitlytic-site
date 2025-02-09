@@ -17,12 +17,12 @@
 		index = (index + 1) % accentColors.length;
 		currentColor = accentColors[index];
 
-		window.sessionStorage.setItem("accentColor", currentColor);
+		window.localStorage.setItem("accentColor", currentColor);
 		applyColor();
 	}
 	
 	function loadColor() {		
-		const sessionData = window.sessionStorage.getItem("accentColor");	
+		const sessionData = window.localStorage.getItem("accentColor");	
 		if (typeof sessionData === "string") {
 			currentColor = sessionData;
 		}
@@ -63,7 +63,7 @@
 			darkMode = !darkMode;
 		}
 
-		window.sessionStorage.setItem("darkMode", darkMode);
+		window.localStorage.setItem("darkMode", darkMode);
 
 		if (darkMode) {
             window.document.body.classList.remove("light");
@@ -79,7 +79,7 @@
 			return false;
 		}
 
-		const sessionData = window.sessionStorage.getItem("darkMode");
+		const sessionData = window.localStorage.getItem("darkMode");
 		if (sessionData) {
 			return "true" === sessionData;
 		}
