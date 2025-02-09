@@ -18,7 +18,7 @@
 		</div>
 	{/if}
 
-	{#if data.type === "project"}
+	{#if data.type === "project"  && data.meta.sourceCode}
 		<a class="main-text source-code" href={data.meta.sourceCode}>
 			Source code
 		</a>
