@@ -2,6 +2,7 @@
 layout: video
 title: State Machines
 link: https://www.youtube.com/embed/ow_Lum-Agbs
+videoDate: 2023-06-15
 ---
 
 ## State Machines

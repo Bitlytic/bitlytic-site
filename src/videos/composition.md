@@ -2,6 +2,7 @@
 layout: video
 title: Composition
 link: https://www.youtube.com/embed/74y6zWZfQKk
+videoDate: 2023-04-26
 ---
 
 ## Inheritance vs Composition
