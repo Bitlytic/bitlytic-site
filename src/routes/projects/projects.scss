@@ -1,0 +1,64 @@
+@use "../main.scss" as *;
+@use "/static/variables.scss" as *;
+
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 2rem 0;
+		
+		&-link {
+			width: 75%;
+			margin: 0 0 1rem 0;
+		}
+
+		&-thumbnail {
+			max-width: 100%;
+			margin: auto;
+			border-radius: 0.25rem;
+			border: 3px solid transparent;
+
+			&:hover {
+				transform: scale(1.05);
+				border-color: var(--text-primary);
+			}
+
+			&:focus {
+				transform: scale(1.05);
+				border-color: var(--text-primary)
+			}
+
+			transition: transform 100ms ease-out, border-color 100ms ease-out;
+		}
+
+		&-title {
+			font-size: $medium-text;
+			font-weight: $font-weight-heavy;
+		}
+	}
+}
+
+a {
+	color: var(--text-primary);
+}
+
+a:link {
+	text-decoration: underline;
+}
+
+a:visited {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}

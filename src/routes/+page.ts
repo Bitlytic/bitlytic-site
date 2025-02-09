@@ -4,7 +4,7 @@ import { browser } from "$app/environment";
 
 export const load: PageLoad = async ({fetch, params}) => {
 
-	let post = await import("../videos/composition-preview.md");
+	let post = await import("/src/posts/video/composition-preview.md");
 
 	return {
 		videoPreview: post.default

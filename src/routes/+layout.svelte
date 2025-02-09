@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "./app.scss";
     import { browser } from '$app/environment';
     import { onMount } from 'svelte';
 
@@ -112,10 +113,10 @@
 			<a href="/projects">Projects</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/projects">Blog</a>
+			<a href="/blogs">Blog</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/projects">Links</a>
+			<a href="/links">Links</a>
 		</div>
 	</div>
 </div>

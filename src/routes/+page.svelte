@@ -21,7 +21,7 @@
 		<data.videoPreview/>
 	</div>
 	
-	<a class="main-text main-text__read-more" href="videos/composition">
+	<a class="main-text main-text__read-more" href="post/video/composition">
 		Read full post
 	</a>
 

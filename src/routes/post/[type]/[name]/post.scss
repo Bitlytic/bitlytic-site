@@ -1,0 +1,15 @@
+@use "/static/variables.scss" as *;
+@use "/src/routes/main.scss" as *;
+
+
+#post-display{
+	:first-child {
+		border: 20px solid red;
+	}
+	color: var(--text-primary);
+}
+
+.source-code {
+	text-align: center;
+	color: var(--text-primary);
+}

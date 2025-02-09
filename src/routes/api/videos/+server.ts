@@ -3,7 +3,7 @@ import { json } from "@sveltejs/kit";
 async function getVideos() {
 	let posts = []
 
-	const paths = import.meta.glob('/src/videos/*.md', { eager: true })
+	const paths = import.meta.glob('/src/posts/video/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path];

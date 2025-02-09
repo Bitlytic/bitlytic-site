@@ -35,7 +35,7 @@
 <div>
 	<Markdown md={md} {plugins}></Markdown>
 	{#if limit}
-		<a href="videos/composition">
+		<a href="post/video/composition">
 			Read full post
 		</a>
 	{/if}

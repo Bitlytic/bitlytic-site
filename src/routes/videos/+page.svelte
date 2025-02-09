@@ -20,10 +20,10 @@
 		{#each data.posts as post}
 		<div class="video-grid__item">
 
-				<a class="video-grid__item-link" href={"/videos/" + post.slug}>
-					<img class="video-grid__item-thumbnail" src={"/thumbnails/" + post.slug + ".webp"}/>
+				<a class="video-grid__item-link" href={"post/video/" + post.slug}>
+					<img class="video-grid__item-thumbnail" src={"/thumbnails/video/" + post.slug + ".webp"}/>
 				</a>
-			<a class="video-grid__item-title" href={"/videos/" + post.slug}>{post.title}</a>
+			<a class="video-grid__item-title" href={"post/video/" + post.slug}>{post.title}</a>
 		</div>
 		{/each}
 	</div>	
