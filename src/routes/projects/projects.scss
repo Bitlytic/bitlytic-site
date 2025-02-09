@@ -20,7 +20,7 @@
 		&-thumbnail {
 			max-width: 100%;
 			margin: auto;
-			border-radius: 0.25rem;
+			border-radius: 0.5rem;
 			border: 3px solid transparent;
 
 			&:hover {
@@ -39,7 +39,35 @@
 		&-title {
 			font-size: $medium-text;
 			font-weight: $font-weight-heavy;
+			max-width: 75%;
+			text-align: center;
+
+			&__date {
+				color: var(--text-secondary);
+				font-size: $small-text;
+				text-decoration: none;
+
+				&:hover, &:focus, &:visited, &:link {
+					text-decoration: none;
+				}
+			}
 		}
+	}
+}
+
+
+.project-sort-controls {
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+	gap: 1rem;
+
+	&__button {
+		background: none;
+		border: none;
+		text-decoration: underline;
+		color: var(--text-primary);
+		cursor: pointer;
 	}
 }
 

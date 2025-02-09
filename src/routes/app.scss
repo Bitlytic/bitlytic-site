@@ -1,5 +1,16 @@
+@use "/static/variables.scss" as *;
+
 .post-display {
 	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 0;
+
+	p {
+		margin: 0.5rem 0;
+	}
+
 	p {
 		&:has(img) {
 			max-width: 80%;
@@ -9,5 +20,11 @@
 		img {
 			max-width: 100%;
 		}
+	}
+
+	h4 {
+		margin: 0 auto;
+		color: var(--text-tertiary);
+		font-size: $small-text;
 	}
 }
