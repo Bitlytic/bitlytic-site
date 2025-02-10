@@ -125,7 +125,7 @@
 <div class="mobile-navbar">
 	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/">
-			<NavbarIcon width="32px" height="32px" svgName="home"></NavbarIcon>
+			<NavbarIcon width="24px" height="24px" svgName="home"></NavbarIcon>
 		</a>
 		<a href="/">
 			Home
@@ -133,7 +133,7 @@
 	</div>
 	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/videos">
-			<NavbarIcon width="32px" height="32px" svgName="camera"></NavbarIcon>
+			<NavbarIcon width="24px" height="24px" svgName="camera"></NavbarIcon>
 		</a>
 		<a href="/videos">
 			Videos
@@ -141,7 +141,7 @@
 	</div>
 	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/projects">
-			<NavbarIcon width="32px" height="32px" svgName="controller"></NavbarIcon>
+			<NavbarIcon width="24px" height="24px" svgName="controller"></NavbarIcon>
 		</a>
 		<a href="/projects">
 			Projects
@@ -149,7 +149,7 @@
 	</div>
 	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/blogs">
-			<NavbarIcon width="32px" height="32px" svgName="journal"></NavbarIcon>
+			<NavbarIcon width="24px" height="24px" svgName="journal"></NavbarIcon>
 		</a>
 		<a href="/blogs">
 			Blog
@@ -157,7 +157,7 @@
 	</div>
 	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/links">
-			<NavbarIcon width="32px" height="32px" svgName="socials"></NavbarIcon>
+			<NavbarIcon width="24px" height="24px" svgName="socials"></NavbarIcon>
 		</a>
 		<a href="/links">
 			Links
