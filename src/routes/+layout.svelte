@@ -13,13 +13,29 @@
 
 	let currentColor: string;
 
+	let isDoubleClick = $state(false);
+	let currentDoubleClick: number;
+
+
 	function changeAccent() {
+		if (isDoubleClick) {
+			changeToSecretAccent();
+			isDoubleClick = false;
+			return;
+		}
+
 		let index = accentColors.findIndex((x) => x == currentColor);
 		index = (index + 1) % accentColors.length;
 		currentColor = accentColors[index];
 
 		window.localStorage.setItem("accentColor", currentColor);
 		applyColor();
+		isDoubleClick = true;
+		clearTimeout(currentDoubleClick);
+		currentDoubleClick = setTimeout(() => {
+			isDoubleClick = false;
+		}, 150);
+
 	}
 	
 	function loadColor() {		
@@ -170,7 +186,7 @@
 		Toggle Light Mode
 	</button>
 	
-	<button onclick={() => {changeAccent()}} ondblclick={() => {changeToSecretAccent();}} class="navbar__color-controls__button" aria-label="changeAccent">
+	<button onclick={() => {changeAccent()}} class="navbar__color-controls__button" aria-label="changeAccent">
 		Change Color
 	</button>
 </div>
