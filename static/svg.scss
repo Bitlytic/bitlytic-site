@@ -1,3 +1,7 @@
 @mixin svg() {
+}
+
+:global(.navbar-svg) {
 	fill: var(--text-primary);
+	transition: fill 250ms ease-out;
 }

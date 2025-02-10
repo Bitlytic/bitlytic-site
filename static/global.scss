@@ -135,7 +135,18 @@ $navbarSize: 20rem;
 		padding-top: 0.5rem;
 		
 		@include svg();
+
+		button {
+			background: none;
+			border: none;
+		}
 	}
+
+
+	&__text {
+		color: var(--text-primary);
+	}
+
 }
 
 @media only screen and (min-width: 1000px) {
@@ -215,6 +226,8 @@ $GodotAccent: #70bafa;
 	--bg-dark-primary: #{$SlighterBGGrey};
 	--bg-dark-secondary: #{$BackgroundGrey};
 	--bg-dark-code: #{$LighterBGGrey};
+	--text-small: #{$small-text};
+	--text-tiny: #{$tiny-text};
 }
 
 @mixin blurple {

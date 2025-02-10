@@ -148,20 +148,20 @@
 		</a>
 	</div>
 	<div class="mobile-navbar__icon">
-		<a class="mobile-navbar__icon-svg" href="/blogs">
-			<NavbarIcon width="24px" height="24px" svgName="journal"></NavbarIcon>
-		</a>
-		<a href="/blogs">
-			Blog
-		</a>
-	</div>
-	<div class="mobile-navbar__icon">
 		<a class="mobile-navbar__icon-svg" href="/links">
 			<NavbarIcon width="24px" height="24px" svgName="socials"></NavbarIcon>
 		</a>
 		<a href="/links">
 			Links
 		</a>
+	</div>
+	<div class="mobile-navbar__icon">
+		<button onclick={changeAccent} class="mobile-navbar__button mobile-navbar__icon-svg" >
+			<NavbarIcon width="24px" height="24px" svgName="palette"></NavbarIcon>
+		</button>
+		<button onclick={changeAccent} class="mobile-navbar__button mobile-navbar__text">
+			Color
+		</button>
 	</div>
 </div>
 

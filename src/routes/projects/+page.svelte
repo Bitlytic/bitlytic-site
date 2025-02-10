@@ -79,7 +79,7 @@
 			{/if}
 		</button>
 		<button onclick={() => sort_posts(sort_create_date)} class="project-sort-controls__button">
-			Project Creation Date
+			Project Date
 			{#if last_sort_func == sort_create_date}
 				{#if asc_sort}
 					▼
