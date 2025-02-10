@@ -108,3 +108,104 @@ Luckily, it's actually quite easy to request a chunk of memory somewhere in kern
 ###
 
 Or just around 16 bytes per object (The keen-eyed of you may notice the numbers above add up to 15, but structs in C are 4-byte aligned, so we get an extra byte for fun).
+
+
+
+![Screenshot](/screenshots/antworks/level-dragging.gif)
+#### This was actually like 2 or 3 days worth of programming effort
+
+
+## Between level loading
+
+Here was by _far_ the most annoying technical challenge I had during the competition. This might not look any different than what we saw before, but this is actually 1. dragging a fruit through a loading zone and 2. that loading zone is between two _levels_ not two _areas_
+
+See, in SM64, there are multiple _levels_ (Bob-omb Battlefield, Whomp's Fortress, etc.) and those levels can have multiple _areas_ (Tiny Huge Island, for example, has a small and large version of the level). And in SM64, levels are completely isolated, so what you do in Tiny Huge Island won't affect the Castle Interior, aside from stars you collect.
+
+When you load the main level, both of instructions on how to build any areas are loaded, and all information about other levels is unloaded. Unfortunately for us, this is handled in a _very_ different way than area loading. 
+
+This means that the first time we load into a level, I need to hook into level loading and store all of the fruit information. Then, when we reload the level, I need to stop it from just spawning every fruit where it expects, and to instead sprinkle in our own fruit spawns.
+
+And for the final piece, I need to also keep track of which of our fruits the ant is holding onto, and place it back in its hands if it's taking one between levels.
+
+
+## A bit more of a technical look
+
+Feel free to skip ahead if code scares you, but if you're an ultra nerd, I'm going to show off some of the fun code I had to use to get this to work.
+
+
+## Level loading
+```C
+// Is level registered?
+if (bhvScript == bhvAntFood && 
+	!(sLevelProcessedFlags & (1 << mappedLevelNum))) {
+
+	// Find first empty object slot
+	get_next_open_slot();
+	
+	lastSavedObject->flags |= OBJECT_FLAG_VALID;
+	// Other field assignments...
+
+	lastSavedObject++;
+
+	sCurrentCmd = CMD_NEXT;
+	return;
+}
+```
+
+SM64 uses behaviors, and here `bhvAntFood` is the catch-all object type that all food/fruit belongs to. So here, we check if we haven't been to this level yet. If we haven't, we save the information of each food object. 
+
+The `sLevelProcessedFlags` 32 bit integer that's always persistent from the time the game is started, so we can keep track of what levels have been loaded.
+
+
+```C
+void update_area_spawns(void) {
+    
+    struct SpawnInfo* spawnInfo = gCurrentArea->objectSpawnInfos;
+
+    spawnInfo = gCurrentArea->objectSpawnInfos;
+
+    // Set the spawn head to the first non ant food object
+    while (spawnInfo != NULL) {
+        if (spawnInfo->behaviorScript == bhvAntFood) {
+            spawnInfo = spawnInfo->next;
+            continue;
+        }
+        break;
+    }
+
+
+    gCurrentArea->objectSpawnInfos = spawnInfo;
+
+    // Filter out all of the spawnInfos that pertain to ant food
+    while (spawnInfo != NULL) {
+        struct SpawnInfo* nextSpawn = spawnInfo->next;
+
+        // Find the next object or NULL that isn't antFood
+        while (nextSpawn != NULL) {
+            if (nextSpawn->behaviorScript == bhvAntFood) {
+                nextSpawn = nextSpawn->next;
+                continue;
+            }
+
+            break;
+        }
+
+        spawnInfo->next = nextSpawn;
+
+        if (spawnInfo->next == NULL) {
+            break;
+        }
+        spawnInfo = spawnInfo->next;
+    }
+
+}
+```
+
+And last, we also want to avoid spawning _any_ food objects, since we handle spawning separately, so we need to skip over any and all foods.
+
+Not a ton to break down, but I thought this was a fun piece of code to end this little write up with.
+
+
+#
+
+\- Bity

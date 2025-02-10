@@ -46,7 +46,7 @@
 
 	&__video {
 		max-width: 100%;
-		max-height: 50%;
+		max-height: 50vw;
 	}
 
 
@@ -75,6 +75,10 @@
 @media only screen and (max-width: 1000px) {
 	.main-text{
 		width: 90%;
+
+		&__video {
+			max-height: 50vw;
+		}
 	}
 }
 
@@ -117,5 +121,38 @@
 	}
 	:global(.string) {
 		color: var(--text-code-string);
+	}
+}
+
+
+:global(.language-c) {
+	overflow-y: auto;
+	display: inline-block;
+	max-width: 100%;
+	color: var(--text-code-default);
+
+	:global(.comment) {
+		color: var(--text-code-comment);
+	}
+	:global(.keyword) {
+		color: var(--text-code-keyword);
+	}
+	:global(.class-name) {
+		color: var(--text-code-class-name);
+	}
+	:global(.function) {
+		color: var(--text-code-function);
+	}
+	:global(.punctuation) {
+		color: var(--text-code-punctuation);
+	}
+	:global(.operator) {
+		color: var(--text-code-operator);
+	}
+	:global(.string) {
+		color: var(--text-code-string);
+	}
+	:global(.number) {
+		color: var(--text-code-class-name);
 	}
 }

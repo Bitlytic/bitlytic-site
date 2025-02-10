@@ -108,6 +108,7 @@ $navbarSize: 20rem;
 		width: calc(100vw - 2rem);
 		transition: width 200ms linear, left 200ms linear;
 		margin-bottom: 4rem;
+		overflow-x: hidden;
 	}
 }
 
@@ -276,6 +277,7 @@ $GodotAccent: #70bafa;
 	--bg-secondary: var(--bg-dark-secondary);
 	--bg-code: var(--bg-dark-code);
 
+	--text-code-default: #{$LightGrey};
 	--text-code-comment: #{$Grey};
 	--text-code-keyword: #{$Pred};
 	--text-code-class-name: #{$LightGreen};
@@ -299,6 +301,7 @@ $GodotAccent: #70bafa;
 	--bg-secondary: #{$LightGrey};
 	--bg-code: #{$BackgroundGrey};
 	
+	--text-code-default: #{$LightGrey};
 	--text-code-comment: #{$Grey};
 	--text-code-keyword: #{$Pred};
 	--text-code-class-name: #{$LightGreen};
