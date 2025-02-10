@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "svg" as *;
 
 :global(body) {
 	background-color: var(--bg-secondary) !important;
@@ -7,8 +8,6 @@
 	margin: 0;
 	// font-family: "Montserrat", serif, monospace;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	position: absolute;
-	top: 4rem;
 }
 
 
@@ -85,6 +84,66 @@ $navbarSize: 20rem;
 	}
 }
 
+.page-content {
+	position: relative;
+
+	top: 4rem;
+
+	left: calc($navbarSize + 4rem);
+
+	width: calc(100vw - $navbarSize - 10rem);
+	margin-bottom: 8rem;
+
+}
+
+@media only screen and (max-width: 1000px) {
+	.navbar {
+		transform: translateX(-$navbarSize - 1rem);
+		transition: all 100ms linear;		
+	}
+	
+	.page-content {
+		left: 0rem;
+		top: 0rem;
+		width: calc(100vw - 2rem);
+		transition: width 200ms linear, left 200ms linear;
+		margin-bottom: 4rem;
+	}
+}
+
+.mobile-navbar {
+	position: fixed;
+	bottom: 0rem;
+	left: 0rem;
+	height: 5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	width: 100%;
+	z-index: 10;
+
+	background-color: var(--bg-secondary);
+
+	&__icon {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		flex: 1;
+		// margin: auto;
+		padding-top: 0.5rem;
+		
+		@include svg();
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.mobile-navbar{
+		transform: translateY(5rem);
+	}
+}
+
 
 a {
 	color: var(--text-primary);
@@ -104,14 +163,6 @@ a:hover {
 
 a:active {
 	text-decoration: none;
-}
-
-.page-content {
-	position: relative;
-
-	left: calc($navbarSize + 4rem);
-
-	width: calc(100vw - $navbarSize - 10rem);
 }
 
 .navbar__color-controls {

@@ -2,6 +2,7 @@
 	import "./app.scss";
     import { browser } from '$app/environment';
     import { onMount } from 'svelte';
+	import NavbarIcon from "../components/navbar-icon.svelte";
 
 	let accentColors : string[] = [
 		"blurple",
@@ -118,6 +119,49 @@
 		<div class="navbar__page-item">
 			<a href="/links">Links</a>
 		</div>
+	</div>
+</div>
+
+<div class="mobile-navbar">
+	<div class="mobile-navbar__icon">
+		<a class="mobile-navbar__icon-svg" href="/">
+			<NavbarIcon width="32px" height="32px" svgName="home"></NavbarIcon>
+		</a>
+		<a href="/">
+			Home
+		</a>
+	</div>
+	<div class="mobile-navbar__icon">
+		<a class="mobile-navbar__icon-svg" href="/videos">
+			<NavbarIcon width="32px" height="32px" svgName="camera"></NavbarIcon>
+		</a>
+		<a href="/videos">
+			Videos
+		</a>
+	</div>
+	<div class="mobile-navbar__icon">
+		<a class="mobile-navbar__icon-svg" href="/projects">
+			<NavbarIcon width="32px" height="32px" svgName="controller"></NavbarIcon>
+		</a>
+		<a href="/projects">
+			Projects
+		</a>
+	</div>
+	<div class="mobile-navbar__icon">
+		<a class="mobile-navbar__icon-svg" href="/blogs">
+			<NavbarIcon width="32px" height="32px" svgName="journal"></NavbarIcon>
+		</a>
+		<a href="/blogs">
+			Blog
+		</a>
+	</div>
+	<div class="mobile-navbar__icon">
+		<a class="mobile-navbar__icon-svg" href="/links">
+			<NavbarIcon width="32px" height="32px" svgName="socials"></NavbarIcon>
+		</a>
+		<a href="/links">
+			Links
+		</a>
 	</div>
 </div>
 

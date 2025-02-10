@@ -44,6 +44,11 @@
 		}
 	}
 
+	&__video {
+		max-width: 100%;
+		max-height: 50%;
+	}
+
 
 	&__description {
 		font-size: $medium-text;
@@ -66,6 +71,13 @@
 		color: var(--text-primary);
 	}
 }
+
+@media only screen and (max-width: 1000px) {
+	.main-text{
+		width: 90%;
+	}
+}
+
 
 :global(code) {
 	background-color: var(--bg-code);
