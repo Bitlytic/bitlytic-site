@@ -3,6 +3,7 @@ layout: project
 title: Antworks (SM64)
 postDate: 2025-02-09 01:10
 createDate: 2023-03-15
+published: true
 ---
 
 ![Screenshot](/thumbnails/project/antworks.png)

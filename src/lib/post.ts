@@ -5,6 +5,7 @@ export type VideoPost = {
 	link: string;
 	videoDate: string;
 	preview?: boolean;
+	published?: boolean;
 }
 
 
@@ -16,4 +17,5 @@ export type ProjectPost = {
 	createDate: string;
 	sourceCode?: string;
 	preview?: boolean;
+	published?: boolean;
 }

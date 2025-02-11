@@ -11,7 +11,7 @@ export async function load({ fetch }: any) {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<ProjectPost, 'slug'>;
-			if (metadata.preview) {
+			if (metadata.preview || !metadata.published) {
 				continue;
 			}
 
