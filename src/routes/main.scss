@@ -101,6 +101,7 @@
 }
 
 :global(.language-gdscript) {
+	overflow-y: auto;
 	:global(.comment) {
 		color: var(--text-code-comment);
 	}
