@@ -96,7 +96,7 @@ func _ready() -> void:
 We can then have other classes, perhaps a hitbox, or something else that needs to interact with health access that component via meta:
 
 Hitbox.gd
-```
+```gdscript
 # Attack is an object passed in by whatever hit this unit
 func hit(attack: Attack) -> void:
 
