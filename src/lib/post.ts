@@ -6,6 +6,7 @@ export type VideoPost = {
 	videoDate: string;
 	preview?: boolean;
 	published?: boolean;
+	wip?: boolean;
 }
 
 

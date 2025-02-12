@@ -20,9 +20,12 @@
 		{#each data.posts as post}
 		<div class="video-grid__item">
 			<a class="video-grid__item-link" href={"post/video/" + post.slug}>
-				<img class="video-grid__item-thumbnail" src={"/thumbnails/video/" + post.slug + ".webp"}/>
+				<img class="video-grid__item-thumbnail {post.published ? '' : 'wip'}" src={"/thumbnails/video/" + post.slug + ".webp"}/>
 			</a>
-			<a class="video-grid__item-title" href={"post/video/" + post.slug}>{post.title}</a>
+			<a class="video-grid__item-title {post.published ? '' : 'wip'}" href={"post/video/" + post.slug}>{post.title}</a>
+			{#if !post.published}
+			<p class="video-grid__item-wip">WIP</p>
+			{/if}
 		</div>
 		{/each}
 	</div>	

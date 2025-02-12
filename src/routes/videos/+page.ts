@@ -11,7 +11,7 @@ export async function load({ fetch }: any) {
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
 			const metadata = file.metadata as Omit<VideoPost, 'slug'>;
-			if (metadata.preview || !metadata.published) {
+			if (metadata.preview) {
 				continue;
 			}
 
@@ -21,6 +21,13 @@ export async function load({ fetch }: any) {
 	}
 
 	posts = posts.sort((a, b) => { 
+		if (a.published && !b.published) {
+			return -1;
+		}
+		if (b.published && !a.published) {
+			return 1;
+		}
+
 		return (new Date(b.videoDate).getTime() - new Date(a.videoDate).getTime()); 
 	});
 
