@@ -17,7 +17,7 @@
 		<SocialLink title="GitHub" link="https://www.github.com/bitlytic"></SocialLink>
 		<SocialLink title="YouTube" link="https://www.youtube.com/bitlytic"></SocialLink>
 		<SocialLink title="Discord" link="https://discord.gg/skPc32bUfA"></SocialLink>
-		<SocialLink title="Bluesky" link="https://bitlytic.bsky.social"></SocialLink>
+		<SocialLink title="Bluesky" link="https://bsky.app/profile/bitlytic.dev"></SocialLink>
 		<SocialLink title="Twitter" link="https://twitter.com/Bitlytic"></SocialLink>
 		<span style="color: var(--text-tertiary); font-size: var(--text-tiny); margin-top: 0;">(When twitter.com stops working, I'm deleting my account)</span>
 	</div>
