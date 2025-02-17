@@ -1,7 +1,7 @@
 <script lang="ts">
+	import PostHeader from "../../../../components/post-header.svelte";
 	let {data} = $props();
 </script>
-
 
 <style lang="scss">
 	@use "./post.scss" as *;

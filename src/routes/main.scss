@@ -87,6 +87,10 @@
 	background-color: var(--bg-code);
 	color: var(--text-code);
 	padding: 0 0.25rem;
+	overflow-y: auto;
+	color: var(--text-code-default);
+	display: inline-block;
+	max-width: 100%;
 }
 
 :global(pre) {
@@ -101,8 +105,6 @@
 }
 
 :global(.language-gdscript) {
-	overflow-y: auto;
-	color: var(--text-code-default);
 
 	:global(.comment) {
 		color: var(--text-code-comment);
@@ -127,13 +129,36 @@
 	}
 }
 
+:global(.language-csharp) {
+
+	:global(.comment) {
+		color: var(--text-code-comment);
+	}
+	:global(.keyword) {
+		color: var(--text-code-keyword);
+	}
+	:global(.class-name) {
+		color: var(--text-code-class-name);
+	}
+	:global(.function) {
+		color: var(--text-code-function);
+	}
+	:global(.punctuation) {
+		color: var(--text-code-punctuation);
+	}
+	:global(.operator) {
+		color: var(--text-code-operator);
+	}
+	:global(.string) {
+		color: var(--text-code-string);
+	}
+	:global(.number) {
+		color: var(--text-code-class-name);
+	}
+}
+
 
 :global(.language-c) {
-	overflow-y: auto;
-	display: inline-block;
-	max-width: 100%;
-	color: var(--text-code-default);
-
 	:global(.comment) {
 		color: var(--text-code-comment);
 	}
