@@ -6,9 +6,28 @@ createDate: 2024-10-01
 sourceCode: https://github.com/Bitlytic/StreamRoguelike
 ---
 
-## Stream Roguelike
+<a class="post-link" href="https://www.youtube.com/playlist?list=PLQvIZAX4oV0la05hUAjLBvUpOt3pMZdx5">
+YouTube Playlist
+</a>
 
-The main reason this video was made is because I wanted to separate a player's ground detection from their hitbox (where things like bullets 'n stuff would hit them). Thus began a journey to break out these two detections in a clean, easy to reuse way, since having every entity implement their own health functionality was pain.
+## Purpose
+
+I wanted to use this project as a way to show people the start of a project all the through needing many a restructure and refactor. So, I streamed it live, explaining my process, and asking any questions people had along the way. 
+
+Aside from that, I also wanted to try making a basic old school roguelike, so this was a fun excuse to finally do it.
+
+
 
 
 ![Screenshot](/screenshots/stream-roguelike/screenshot-1.png)
+#### Love it when a game looks like a spreadsheet
+
+
+## Focus Areas
+
+Although the overall goal was to make a little game in front of people, I actually had a few different things in mind I wanted to get more practical experience in, those are:
+
+1. Resources
+2. Action Pattern
+3. Procedural/Random Generation
+4. 

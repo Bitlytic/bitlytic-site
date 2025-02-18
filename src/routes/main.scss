@@ -82,6 +82,10 @@
 	}
 }
 
+:global(.post-link) {
+	width: 100%;
+	text-align: center;
+}
 
 :global(code) {
 	background-color: var(--bg-code);

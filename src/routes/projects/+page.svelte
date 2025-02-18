@@ -56,13 +56,13 @@
 	</div>
 
 	<div class="main-text main-text__description main-text__description--centered">
-		Here are <i>all</i> of the projects I've worked on (if I've added them all).
+		Here are a ton of projects I've worked on.
 		A lot of these have never seen the light of day, but they deserve
 		some words as they've made me the dev I am today.
 	</div>
 	<div class="main-text main-text__description main-text__description--centered">
-		These range from projects I've done on stream to the smallest of mods
-		for games people have never played.
+		These range from things I've done on stream to the smallest of mods
+		for unknown games.
 	</div>
 
 	<div class="project-sort-controls">

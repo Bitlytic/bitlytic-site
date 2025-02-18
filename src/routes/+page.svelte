@@ -36,10 +36,4 @@
 	<a class="main-text main-text__read-more" href="post/project/antworks">
 		Read full post
 	</a>
-
-	<hr class="main-text__divider"/>
-
-	<div class="main-text main-text__header">
-		Or a blog post:
-	</div>
 </div>

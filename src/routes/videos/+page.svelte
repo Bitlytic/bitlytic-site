@@ -24,7 +24,7 @@
 			</a>
 			<a class="video-grid__item-title {post.published ? '' : 'wip'}" href={"post/video/" + post.slug}>{post.title}</a>
 			{#if !post.published}
-			<p class="video-grid__item-wip">WIP</p>
+			<p class="video-grid__item-wip">Coming soon™</p>
 			{/if}
 		</div>
 		{/each}
