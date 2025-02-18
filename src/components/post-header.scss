@@ -1,0 +1,21 @@
+.post-header {
+    display: block;
+    flex-shrink: 1;
+    &__content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__link {
+        background: none;
+        border: none;
+        margin: 0 0.5rem;
+        align-self: center;
+
+        cursor: pointer;
+
+        svg {
+            fill: var(--text-secondary);
+        }
+    }
+}

@@ -6,16 +6,19 @@ createDate: 2022-07-20
 sourceCode: https://github.com/Bitlytic/CharacterRerollMTD
 published: true
 ---
+<script>
+    import PostHeader from "/src/components/post-header.svelte";
+</script>
 
 ## Unity Game Modding
 
 This project honestly taught me more than I give it credit for. I started work on it because a youtuber I watched at the time, [sifd](https://www.youtube.com/@Sifd), mentioned offhand that he would love the ability to reroll the random character ability to make recording content easier for the game. So, I set off to do that.
 
-<h2 id="BepInEx">BepInEx</h2>
+<PostHeader name="BepInEx"/>
 
 The first thing I needed to learn was [BepInEx](https://github.com/BepInEx/BepInEx), a tool used to mod Unity games. I find it super neat, so I'm going to do a quick high level technical explanation of what BepInEx functionally does, so skip ahead to the next section if you don't really care about it.
 
-<a href="">Click me to skip the nerd talk 🤓</a>
+<a class="post-link" href="">Click me to skip the super nerd talk 🤓</a>
 
 ### C#
 
@@ -48,4 +51,4 @@ public class Player : MonoBehaviour {
 Well, the easiest way to modify this would be to hook into this class directly after the `Start()` method, and affect the member variables directly. 
 
 
-<h2></h2>
+<PostHeader name="BepInEx"/>

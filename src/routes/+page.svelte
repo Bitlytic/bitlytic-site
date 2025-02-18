@@ -1,6 +1,4 @@
 <script>
-    import Seo from "../components/seo.svelte";
-
 	let {data} = $props();
 </script>
 

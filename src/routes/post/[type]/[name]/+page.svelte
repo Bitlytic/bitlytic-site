@@ -1,5 +1,4 @@
 <script lang="ts">
-	import PostHeader from "../../../../components/post-header.svelte";
 	let {data} = $props();
 </script>
 

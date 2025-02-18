@@ -1,6 +1,6 @@
 <script>
 
-    import SocialLink from "../../components/social-link.svelte";
+    import SocialLink from "/src/components/social-link.svelte";
 
 </script>
 <style lang="scss">
