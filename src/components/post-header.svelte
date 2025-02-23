@@ -2,10 +2,14 @@
     import "./post-header.scss";
     import {replaceState} from "$app/navigation";
 
-    let {name, id} = $props();
+    let {name, id} : {name: string, id?: string} = $props();
 
     if (!id) {
         id = name;
+    }
+
+    if (id) {
+        id = id.replaceAll(" ", "-").toLowerCase();
     }
 
     let showCopy = $state(false);
@@ -16,7 +20,9 @@
 
     function copyLink() {
         let baseUrl = window.location.href.split("#")[0];
-        replaceState(baseUrl + "#" + id, null);
+        let headerUrl = baseUrl + "#" + id;
+        replaceState(headerUrl, null);
+        navigator.clipboard.writeText(headerUrl);
         // window.location.(baseUrl + "#" + id);
     }
 </script>

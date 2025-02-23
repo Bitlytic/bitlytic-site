@@ -293,10 +293,11 @@ $GodotAccent: #70bafa;
 	// Light
 	--panel-border: black;
 	
-	--text-primary: #{$BackgroundGrey};
+	--text-primary: #{$PassiveStarBase};
 	--text-secondary: #{$LighterBGGrey};
 	--text-tertiary: #{$GodotDark};
 	--text-code: #{$Pred};
+	--text-code-bg: #{$BackgroundGrey};
 	
 	--bg-primary: #{$White};
 	--bg-secondary: #{$LightGrey};
