@@ -1,10 +1,14 @@
 <script lang="ts">
+    import ToastNotification from "../../../../components/toast-notification.svelte";
+
 	let {data} = $props();
 </script>
 
 <style lang="scss">
 	@use "./post.scss" as *;
 </style>
+
+<ToastNotification></ToastNotification>
 
 <div class="main-page">
 	<div class="main-text main-text__header main-text__header--title">

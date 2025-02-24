@@ -1,0 +1,37 @@
+@use "/static/global.scss" as *;
+
+.toast-notification {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	gap: 1rem;
+	padding: 0.5rem 1rem;
+
+	position: fixed;
+	bottom: -4rem;
+	left: 55vw;
+	fill: $Shamrock;
+
+	border-radius: 1rem;
+	border: solid var(--bg-secondary) 2px;
+
+	background-color: var(--bg-primary);
+
+	$shadowLength: 0.1rem;
+	$shadowBlur: 0;
+	$shadowBg: var(--bg-secondary);
+	
+	// box-shadow: 0 #{$shadowLength} #{$shadowBlur} #{$shadowBg}, 0 -#{$shadowLength} #{$shadowBlur} #{$shadowBg}, #{$shadowLength} 0 #{$shadowBlur} #{$shadowBg}, -#{$shadowLength} 0 #{$shadowBlur} #{$shadowBg};
+
+	&__text {
+		color: var(--text-secondary);
+		text-align: center;
+		vertical-align: middle;
+		height: 100%;
+		width: 100%;
+	}
+
+	transition: all 250ms ease-out, transform 500ms ease-in-out;
+
+}

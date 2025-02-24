@@ -1,6 +1,7 @@
 <script lang="ts">
     import "./post-header.scss";
     import {replaceState} from "$app/navigation";
+    import { showNotification } from "$lib/toast";
 
     let {name, id} : {name: string, id?: string} = $props();
 
@@ -23,6 +24,7 @@
         let headerUrl = baseUrl + "#" + id;
         replaceState(headerUrl, null);
         navigator.clipboard.writeText(headerUrl);
+        showNotification();
         // window.location.(baseUrl + "#" + id);
     }
 </script>
