@@ -12,9 +12,10 @@
 
     if (id) {
         id = id.replaceAll(" ", "-").toLowerCase();
+        id = id.replaceAll("&", "and");
     }
 
-    let headerUrl = "";
+    let headerUrl = $state("");
 
     let showCopy = $state(false);
 
@@ -24,7 +25,7 @@
 
     function copyLink(mouseEvent: MouseEvent) {
         mouseEvent.preventDefault();
-        replaceState(headerUrl, null);
+        replaceState(headerUrl, {});
         navigator.clipboard.writeText(headerUrl);
         showNotification();
     }

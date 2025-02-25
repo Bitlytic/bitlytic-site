@@ -81,6 +81,10 @@ $navbarSize: 20rem;
 			font-size: $medium-text;
 			font-weight: $font-weight-heavy;
 		}
+
+		&-link {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -159,14 +163,6 @@ $navbarSize: 20rem;
 
 :global(a) {
 	color: var(--text-primary);
-}
-
-a:link {
-	text-decoration: none;
-}
-
-a:visited {
-	text-decoration: none;
 }
 
 a:hover {

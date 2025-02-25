@@ -57,3 +57,39 @@ A couple key points I'd like to mention:
 1. `_static_init()` is called at the start of the game automatically as part of Godot registering the `CraftingRegistry` class for use in the game.
 2. _Technically_ this doesn't account for the possibility of files that aren't recipe .tres files in the folder so either don't do that, or adapt it to expect those.
 3. It also doesn't call subdirectories recursively, but there's a way to do that by calling `dir.current_is_dir()` after `dir.get_next()` to check if we're currently looking at a directory, and passing that into a recursive call with the path.
+
+<PostHeader name="Crafting Recipes & Items"/>
+
+And of course, it would be impossible to show off this system without mentioning the items and recipes. Thankfully, they are super simple and adaptable to whatever system you use.
+
+```GDScript
+class_name Item
+extends Resource
+
+@export var item_name : String
+@export var sprite : Texture2D
+```
+
+Here we define the most basic item - a name and texture. We can also extend this later if we want an item with behavior, imagine a `ToolItem` or `PotionItem` class.
+
+
+
+And time for a two parter:
+
+```GDScript
+class_name CraftingIngredient
+extends Resource
+
+@export var item : Item
+@export var count : int
+```
+
+```GDScript
+class_name CraftingRecipe
+extends Resource
+
+@export var ingredients : Array[CraftingIngredient]
+@export var output : CraftingIngredient
+```
+
+This is my preferred way of handling item counts in a recipe, but defining a `CraftingIngredient` class lets me define both the item and amount of that item in one field inside of a `CraftingRecipe`

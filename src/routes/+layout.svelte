@@ -80,7 +80,7 @@
 			darkMode = !darkMode;
 		}
 
-		window.localStorage.setItem("darkMode", darkMode);
+		window.localStorage.setItem("darkMode", darkMode.toString());
 
 		if (darkMode) {
             window.document.body.classList.remove("light");
@@ -119,21 +119,21 @@
 		</a>
 	</div>
 	<div class="navbar__title">
-		<a class="navbar__title-header" href="/">Bitlytic</a>
+		<a class="navbar__title-header navbar__page-link" href="/">Bitlytic</a>
 	</div>
 	<hr class="navbar__separator"/>
 	<div class="navbar__page">
 		<div class="navbar__page-item">
-			<a href="/videos">Videos</a>
+			<a class="navbar__page-link" href="/videos">Videos</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/projects">Projects</a>
+			<a class="navbar__page-link" href="/projects">Projects</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/blogs">Blog</a>
+			<a class="navbar__page-link" href="/blogs">Blog</a>
 		</div>
 		<div class="navbar__page-item">
-			<a href="/links">Links</a>
+			<a class="navbar__page-link" href="/links">Links</a>
 		</div>
 	</div>
 </div>
