@@ -5,8 +5,11 @@ link: https://www.youtube.com/embed/74y6zWZfQKk
 videoDate: 2023-04-26
 published: true
 ---
+<script>
+    import PostHeader from "/src/components/post-header.svelte";
+</script>
 
-## Inheritance vs Composition
+<PostHeader name="Inheritance vs Composition"/>
 
 The main reason this video was made is because I wanted to separate a player's ground detection from their hitbox (where things like bullets 'n stuff would hit them). Thus began a journey to break out these two detections in a clean, easy to reuse way, since having every entity implement their own health functionality was pain.
 
@@ -53,7 +56,7 @@ Unfortunately, our current setup almost immediately breaks under this, since we 
 While this might be inconvenient at worst, ideally functionality like this shouldn't be tied to a specific node type. So what if we had a system where something can have health regardless of if it's a `CharacterBody2D`, `StaticBody2D`, or even a 3D Node.
 
 
-## Nodes as components
+<PostHeader name="Nodes as Components"/>
 
 Well, we need ways to dynamically add functionality to an object, despite its base class. Since we're in Godot, we can just tack on this functionality through auxiliary nodes!
 
@@ -81,7 +84,7 @@ This lets us tack this node onto _anything_ that we want to have health function
 
 I started using this system because I was inspired by [a blog by Alyce/CthulhuCodesGames](https://alyceosbourne.github.io/godot_blog/2024/08/13/Self-Binding-Components.html) where she takes things a bit further by registering signals in the parent to interact with these components.
 
-### Metadata
+<PostHeader name="Metadata"/>
 
 One way that I've been using this recently is through metadata (`Node.set_meta()` and `Node.get_meta()`) which allow a component to register itself to its parent and creates a way for other components to interact it.
 
@@ -111,7 +114,8 @@ func hit(attack: Attack) -> void:
 This gives us a clean, mostly decoupled way of interacting with the health system from the outside.
 
 
-### Unity
+<PostHeader name="Unity"/>
+
 
 This was around the time that something finally clicked for me... This is just Unity's `GetComponent<>()` methods but homebrewed in Godot... Oops.
 

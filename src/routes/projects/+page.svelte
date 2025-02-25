@@ -45,7 +45,7 @@
 	}
 
 	// Select default sort
-	last_sort_func = sort_post_date;
+	last_sort_func = sort_create_date;
 	sort_posts(last_sort_func);
 
 </script>
@@ -67,9 +67,9 @@
 
 	<div class="project-sort-controls">
 		<span>Sort by: </span>
-		<button onclick={() => sort_posts(sort_post_date)} class="project-sort-controls__button">
-			Post Date 
-			{#if last_sort_func == sort_post_date}
+		<button onclick={() => sort_posts(sort_create_date)} class="project-sort-controls__button">
+			Project Date
+			{#if last_sort_func == sort_create_date}
 				{#if asc_sort}
 					▼
 				{/if}
@@ -78,9 +78,9 @@
 				{/if}
 			{/if}
 		</button>
-		<button onclick={() => sort_posts(sort_create_date)} class="project-sort-controls__button">
-			Project Date
-			{#if last_sort_func == sort_create_date}
+		<button onclick={() => sort_posts(sort_post_date)} class="project-sort-controls__button">
+			Post Date 
+			{#if last_sort_func == sort_post_date}
 				{#if asc_sort}
 					▼
 				{/if}

@@ -182,11 +182,11 @@
 </div>
 
 <div class="navbar__color-controls">
-	<button onclick={() => {toggleColorScheme(null)}} class="navbar__color-controls__button" aria-label="toggleDarkMode">
+	<button onclick={() => {toggleColorScheme(null)}} class="navbar__color-controls__button" aria-label="Toggle Dark Mode">
 		Toggle Light Mode
 	</button>
 	
-	<button onclick={() => {changeAccent()}} class="navbar__color-controls__button" aria-label="changeAccent">
+	<button onclick={() => {changeAccent()}} class="navbar__color-controls__button" aria-label="Change Accent Color">
 		Change Color
 	</button>
 </div>

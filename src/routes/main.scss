@@ -109,6 +109,14 @@
 		color: var(--text-code-default);
 		display: inline-block;
 		max-width: 100%;
+		tab-size: 4rem;
+	}
+}
+
+:global(ol) {
+	margin: 0;
+	:global(li) {
+		margin: 0.75rem 0;
 	}
 }
 

@@ -270,6 +270,7 @@ $GodotAccent: #70bafa;
 	--text-secondary: #{$LightGrey};
 	--text-tertiary: #{$Grey};
 	--text-code: #{$Pred};
+	--text-code-bg: var(--bg-dark-code);
 
 	--bg-primary: var(--bg-dark-primary);
 	--bg-secondary: var(--bg-dark-secondary);
@@ -297,11 +298,11 @@ $GodotAccent: #70bafa;
 	--text-secondary: #{$LighterBGGrey};
 	--text-tertiary: #{$GodotDark};
 	--text-code: #{$Pred};
-	--text-code-bg: #{$BackgroundGrey};
+	--text-code-bg: #{$PassiveStarBase};
 	
 	--bg-primary: #{$White};
 	--bg-secondary: #{$LightGrey};
-	--bg-code: #{$BackgroundGrey};
+	--bg-code: #{$PassiveStarBase};
 	
 	--text-code-default: #{$LightGrey};
 	--text-code-comment: #{$Grey};

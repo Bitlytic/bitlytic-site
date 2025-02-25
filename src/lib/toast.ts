@@ -1,6 +1,6 @@
 export function showNotification() {
 	var notif : HTMLDivElement | null = document.querySelector(".toast-notification");
-	//TODO: Mobile can't copy links
+
 	if (!notif) {
 		return;
 	}

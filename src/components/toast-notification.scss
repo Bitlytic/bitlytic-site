@@ -13,6 +13,8 @@
 	left: 55vw;
 	fill: $Shamrock;
 
+	width: 128px;
+
 	border-radius: 1rem;
 	border: solid var(--bg-secondary) 2px;
 
@@ -22,6 +24,7 @@
 	$shadowBlur: 0;
 	$shadowBg: var(--bg-secondary);
 	
+	transition: all 250ms ease-out, transform 500ms ease-in-out;
 	// box-shadow: 0 #{$shadowLength} #{$shadowBlur} #{$shadowBg}, 0 -#{$shadowLength} #{$shadowBlur} #{$shadowBg}, #{$shadowLength} 0 #{$shadowBlur} #{$shadowBg}, -#{$shadowLength} 0 #{$shadowBlur} #{$shadowBg};
 
 	&__text {
@@ -32,6 +35,12 @@
 		width: 100%;
 	}
 
-	transition: all 250ms ease-out, transform 500ms ease-in-out;
 
+}
+
+@media only screen and (max-width: 1000px) {
+	.toast-notification {
+		left: calc(50% - 82px);
+		bottom: 0rem;
+	}
 }
