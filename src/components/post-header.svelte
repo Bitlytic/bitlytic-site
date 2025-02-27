@@ -13,6 +13,7 @@
     if (id) {
         id = id.replaceAll(" ", "-").toLowerCase();
         id = id.replaceAll("&", "and");
+        id = id.replaceAll("?", "");
     }
 
     let headerUrl = $state("");
